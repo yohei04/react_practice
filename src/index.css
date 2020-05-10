@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.tweet {
+  border: 2px solid black;
+}
+
+.red {
+  color: red;
+  border-bottom: aqua 2px solid;
+}
