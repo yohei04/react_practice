@@ -19,7 +19,9 @@ code {
 
 .red {
   color: red;
+  user-select:none
 }
 .blue {
   color: blue;
+  user-select:none
 }

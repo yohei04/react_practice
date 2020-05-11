@@ -5,14 +5,15 @@ import React from 'react';
 // import AddMovie from './AddMovie';
 import Button from './Button';
 import Button2 from './Button2';
+import CheckBox from './CheckBox';
 import './App.css';
 
 
 function App() {
   return (
     <div>
-      <Button2 name="Ken"/>
-      <Button2 name="Bob"/>
+      <Button2 />
+      <CheckBox />
     </div>
 
 
