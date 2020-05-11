@@ -19,5 +19,7 @@ code {
 
 .red {
   color: red;
-  border-bottom: aqua 2px solid;
+}
+.blue {
+  color: blue;
 }
