@@ -5,7 +5,7 @@ import React from 'react';
 // import AddMovie from './AddMovie';
 import Button from './Button';
 import Button2 from './Button2';
-import CheckBox from './CheckBox';
+import ClickMe from './ClickMe';
 import './App.css';
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Button2 />
-      <CheckBox />
+      <ClickMe />
     </div>
 
 

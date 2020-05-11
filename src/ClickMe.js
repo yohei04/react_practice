@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-function CheckBox() {
-
+function ClickMe() {
   const [count, setCount] = useState(0)
   const [title, setTitle] = useState("Click me！")
   const [color, setColor] = useState('')
@@ -15,10 +14,9 @@ function CheckBox() {
         color === "blue" ? setColor('red') : setColor('blue')
       }}> {title}
       </p>
-      {/* <input type="radio" onClick={() => setCount(count + 1)}/> */}
     </div>
   )
 }
 
-export default CheckBox
+export default ClickMe
 
