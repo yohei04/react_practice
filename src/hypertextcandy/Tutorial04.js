@@ -8,74 +8,40 @@ const options = [
 ];
 
 function Tutorial04() {
-  const [lang, setLang] = useState(options[0].label);
-  const [elseLang, setElseLang] = useState();
+  const [val, setVal] = useState('js');
+  const [text, setText] = useState();
 
-  const getAnswer = (e) => {
-    setLang(e.target.value);
-    /* ??? */
-    // その他が選択されている場合は、自由記入欄の入力値を返す
-    // それ以外の場合は、options 配列の該当する要素の label を返す
-  };
+  const handleRadioChange = (e) => setVal(e.target.value);
+  const handleTextChange = (e) => setText(e.target.value);
 
-  const getValue = (e) => {
-    setElseLang(e.target.value);
+  const getAnswer = () => {
+    return val === '' ? text : options.find((o) => o.value === val).label;
   };
 
   return (
     <>
       <h3>好きなプログラミング言語を教えてください。</h3>
-      <label>
-        <input
-          type="radio"
-          value={options[0].label}
-          checked={lang === options[0].label}
-          onClick={getAnswer}
-        />
-        {options[0].label}
-      </label>
-      <label>
-        <input
-          type="radio"
-          value={options[1].label}
-          checked={lang === options[1].label}
-          onClick={getAnswer}
-        />
-        {options[1].label}
-      </label>
-      <label>
-        <input
-          type="radio"
-          value={options[2].label}
-          checked={lang === options[2].label}
-          onClick={getAnswer}
-        />
-        {options[2].label}
-      </label>
-      <label>
-        <input
-          type="radio"
-          value={options[3].label}
-          checked={lang === options[3].label}
-          onClick={getAnswer}
-        />
-        {options[3].label}
-      </label>
-      {lang === 'その他' ? (
+      {options.map((option) => (
+        <label key={option.value}>
+          <input
+            type="radio"
+            value={option.value}
+            onChange={handleRadioChange}
+            checked={val === option.value}
+          />
+          {option.label}
+        </label>
+      ))}
+      {val === '' && (
         <div>
-          <label>自由記入:</label>
-          <input type="text" onChange={getValue} />
+          <label>自由記入：</label>
+          <input type="text" value={text} onChange={handleTextChange} />
         </div>
-      ) : (
-        ''
       )}
       <hr />
-      {lang === 'その他' ? <h3>回答: {elseLang}</h3> : <h3>回答: {lang}</h3>}
+      <h3>回答: {getAnswer()}</h3>
     </>
   );
 }
 
 export default Tutorial04;
-
-// const root = document.getElementById('root');
-// ReactDOM.render(<App />, root);
