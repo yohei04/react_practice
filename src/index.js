@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Tutorial42} from './hypertextcandy/Tutorial42';
+import { NumberGuessing } from './hypertextcandy/Tutorial43';
 
-ReactDOM.render(
-  // <Tutorial4-1 />,
-  <Tutorial42 />,
-  document.getElementById('root')
-);
+ReactDOM.render(<NumberGuessing />, document.getElementById('root'));
