@@ -6,13 +6,12 @@ const random = (max) => {
 
 function Guess({ judge }) {
   const [val, setVal] = React.useState('');
-  const handleNum = (e) => {
-    setVal(+ e.target.value);
-  };
+  const handleNum = (e) => setVal(e.target.value)
+  const handleClick = () => judge(val * 1)
   return (
     <>
-      <input type="text" value={val} onChange={handleNum} />
-      <button onClick={() => judge(val)}>予想する</button>
+      <input type="number" value={val} onChange={handleNum} />
+      <button onClick={handleClick}>予想する</button>
     </>
   );
 }
