@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Tutorial61 from './hypertextcandy/Tutorial61'
+import App from './CodeAndCreate-TaskManager/components/App'
 
-ReactDOM.render(<Tutorial61 />, document.getElementById('root'));
+
+ReactDOM.render(<App /> , document.getElementById('root'));
