@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Task = () => {
+const Task = ({task}) => {
   return (
-    <li className="list-title">
-      <span>Task title</span>
+    <li className="list-item">
+      <span>{task.title}</span>
       <div>
         <button className="btn-delete task-btn">
           <i className="fas fa-trash-alt"></i>
